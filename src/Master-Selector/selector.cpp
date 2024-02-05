@@ -1,20 +1,16 @@
 #include "Master-Selector/selector.hpp"
 
 
-selector::Auton::Auton(std::string name, const std::function<void()>& callback) : name(name), callback(callback) {}
-selector::Category::Category(std::string name, const std::vector <Auton>& autons) : name(name), autons(autons) {}
+std::vector<ms::Category> auton_categories = {};
+ms::Auton* selected_auton = nullptr;
 
-
-std::vector<selector::Category> auton_categories = {};
-selector::Auton* selected_auton = nullptr;
-
-void selector::set_autons(const std::vector<selector::Category> &categories) {
+void ms::set_autons(const std::vector<ms::Category> &categories) {
     auton_categories = categories;
     selected_auton = &auton_categories[0].autons[0];
 }
 
 
-void selector::call_selected_auton() {
+void ms::call_selected_auton() {
     selected_auton->callback();
 }
 
@@ -23,11 +19,11 @@ lv_obj_t* tabview = nullptr;
 // Map the page number to the button matrix
 std::vector<lv_obj_t*> btnms = {};
 // Map the button matrix to the category so the category can be retrieved during the callback
-std::map<lv_obj_t*, selector::Category*> btnm_to_category;
+std::map<lv_obj_t*, ms::Category*> btnm_to_category;
 
 
 lv_res_t button_action(lv_obj_t *btnm, const char *txt) {
-    for (selector::Auton& auton : btnm_to_category[btnm]->autons) {
+    for (ms::Auton& auton : btnm_to_category[btnm]->autons) {
         if (strcmp(auton.name.c_str(), txt) == 0) {
             selected_auton = &auton;
             break;
@@ -57,7 +53,7 @@ void handle_tab_change() {
 }
 
 
-void selector::initialize(int autons_per_row) {
+void ms::initialize(int autons_per_row) {
     btnm_to_category = {};
 
     lv_theme_t* theme = lv_theme_alien_init(360, NULL);
@@ -65,7 +61,7 @@ void selector::initialize(int autons_per_row) {
 
     tabview = lv_tabview_create(lv_scr_act(), NULL);
 
-    for (selector::Category& category : auton_categories) {
+    for (ms::Category& category : auton_categories) {
         lv_obj_t* category_tab = lv_tabview_add_tab(tabview, category.name.c_str());
         lv_obj_t* category_btnm = lv_btnm_create(category_tab, NULL);
 
