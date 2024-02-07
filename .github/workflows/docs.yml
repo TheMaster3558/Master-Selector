@@ -23,7 +23,7 @@ jobs:
       - name: Build docs
         run: |
           pip install -r ./docs/requirements.txt
-          make htmldocs
+          ./docs/make htmldocs
 
       - name: Checkout gh-pages
         uses: actions/checkout@v4
