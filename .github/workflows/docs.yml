@@ -15,6 +15,9 @@ jobs:
         with:
           ref: stable
 
+      - name: Install Doxygen
+        run: sudo apt-get update && sudo apt-get install -y doxygen
+
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
