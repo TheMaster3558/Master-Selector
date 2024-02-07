@@ -1,44 +1,48 @@
-name: Sphinx Action
+name: Push docs to GitHub Pages
 
 on:
   push:
     branches: [ stable ]
 
 jobs:
-  build:
+  push-docs:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout source
+        uses: actions/checkout@v4
         with:
-          ref: stable
-
-      - name: Install Doxygen
-        run: sudo apt-get update && sudo apt-get install -y doxygen
+          fetch-depth: 5
+          submodules: true
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
-          python-version: 3.x
+          python-version: "3.x"
 
-      - name: Install dependencies
+      - name: Build docs
         run: |
-          python -m pip install --upgrade pip
-          pip install -r docs/requirements.txt
+          pip install -r ./docs/requirements.txt
+          make html
 
-      - name: Build Sphinx Documentation
-        run: |
-          sphinx-build docs docs/build
-
-      - name: Create public
-        run: |
-          mkdir ./public
-          cp -r ./docs/build/* ./public
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Checkout gh-pages
+        uses: actions/checkout@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: './public'
+          fetch-depth: 5
+          ref: gh-pages
+          path: docs/gh-pages
+
+      - name: Sync docs
+        run: |
+          rsync -a docs/_build/html/ docs/gh-pages/current/
+
+      - name: Commit and push docs
+        uses: magicstack/gha-commit-and-push@master
+        with:
+          target_branch: gh-pages
+          workdir: docs/gh-pages
+          commit_message: Automatic documentation update
+          github_token: ${{ secrets.RELEASE_BOT_GITHUB_TOKEN }}
+          ssh_key: ${{ secrets.RELEASE_BOT_SSH_KEY }}
+          gpg_key: ${{ secrets.RELEASE_BOT_GPG_KEY }}
+          gpg_key_id: "5C468778062D87BF!
