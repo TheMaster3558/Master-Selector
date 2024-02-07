@@ -1,1 +1,2 @@
 shibuya>=2024.0
+breathe>=4.35
