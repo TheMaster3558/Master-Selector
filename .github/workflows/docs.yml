@@ -23,9 +23,7 @@ jobs:
       - name: Build docs
         run: |
           pip install -r ./docs/requirements.txt
-          dir
-          dir docs
-          ./docs/make htmldocs
+          python -m sphinx ./docs ./docs/_build
 
       - name: Checkout gh-pages
         uses: actions/checkout@v4
