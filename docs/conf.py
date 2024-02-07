@@ -20,7 +20,6 @@ extensions = [
 ]
 
 import subprocess
-subprocess.call('make clean')
 subprocess.call('doxygen')
 
 breathe_projects = { "Master-Selector": "_doxygen/xml/" }
