@@ -14,12 +14,14 @@ author = 'The Master'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'breathe'
+    'breathe',
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.intersphinx'
 ]
 
 import subprocess
 subprocess.call('make clean')
-subprocess.call('../doxygen')
+subprocess.call('doxygen')
 
 breathe_projects = { "Master-Selector": "_doxygen/xml/" }
 breathe_default_project = "Master-Selector"
@@ -31,5 +33,5 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'alabaster'
+html_theme = 'shibuya'
 html_static_path = ['_static']
