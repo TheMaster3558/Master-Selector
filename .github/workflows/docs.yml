@@ -14,5 +14,8 @@ jobs:
       pages: write
       id-token: write
     steps:
-    - id: deployment
-      uses: sphinx-notes/pages@v3
+      - name: Install make
+        run: sudo apt-get update && sudo apt-get install -y make
+
+      - id: deployment
+        uses: sphinx-notes/pages@v3
