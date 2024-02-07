@@ -23,6 +23,8 @@ jobs:
       - name: Build docs
         run: |
           pip install -r ./docs/requirements.txt
+          dir
+          dir docs
           ./docs/make htmldocs
 
       - name: Checkout gh-pages
