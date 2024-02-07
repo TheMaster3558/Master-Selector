@@ -20,6 +20,13 @@ temp.errors
 # CLion
 .idea
 
+# Python
+venv/
+
+# Docs
+docs/_build
+docs/_doxygen
+
 # Doxygen
-docs/html
-docs/latex
+*.exe
+*.dll
