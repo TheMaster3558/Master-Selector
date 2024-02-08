@@ -76,7 +76,8 @@ z
     }
 
 
-From here, you're all good to go! If you want to view more detail about the classes
+From here, you're all good to go on the coding part! If you want to view more detail about the classes
 and functions, visit :ref:`this<Master-Selector API Reference>` section of our documentation.
 
-Good luck coding!
+
+:ref:`Next Guide<3 - Interacting with the Brain>`
