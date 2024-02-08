@@ -1,7 +1,7 @@
 1 - Getting Started
 ===================
 
-This tutorial will teach you how to install *Master-Selector* and start using it!
+This tutorial will teach you how to install Master-Selector and start using it!
 
 
 Development Environment
@@ -17,7 +17,7 @@ For more instructions on how to use PROS, visit their `getting started page <htt
 Master-Selector Installation
 ------------------------------
 Visit our `GitHub <https://github.com/themaster3558/master-selector>`_ and navigate to the
-releases page. Then download the latest release, it should look like `Master-Selector@x.x.x.zip`.
+releases page. Then download the latest release, it should look like ``Master-Selector@x.x.x.zip``.
 Once you have downloaded that, move it to your project folder.
 
 Next, open up your PROS terminal. You must run the following commands.
@@ -29,7 +29,7 @@ Next, open up your PROS terminal. You must run the following commands.
 
 Of course, replace the x's with your installed Master-Selector version.
 
-Lastly, add this to your `include/main.h` file and you are ready to use Master-Selector!
+Lastly, add this to your ``include/main.h`` file and you are ready to use Master-Selector!
 
 .. code:: cpp
 

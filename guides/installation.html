@@ -1,6 +1,6 @@
 
   <!DOCTYPE html>
-<html lang="en" data-accent-color="violet" data-content_root="../">
+<html lang="en" data-accent-color="red" data-content_root="../">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,7 +33,13 @@
       <strong>Master-Selector</strong>
     </a>
     <div class="sy-head-links" id="NavLinks">
-      <nav class="sy-head-nav"></nav>
+      <nav class="sy-head-nav">
+
+<ul><li class="link">
+          <a href="https://github.com/TheMaster3558/Master-Selector"><span>GitHub</span><i class="i-icon external-link"></i></a>
+        </li><li class="link">
+          <a href="https://github.com/TheMaster3558/Master-Selector/releases"><span>Releases</span><i class="i-icon external-link"></i></a>
+        </li></ul></nav>
       <div class="sy-head-extra flex items-center print:hidden">
 <form class="searchbox flex items-center" action="../search.html" method="get">
   <input type="text" name="q" placeholder="Search" />
@@ -42,6 +48,9 @@
         
         
         <div class="sy-head-social flex items-center">
+            <a class="flex items-center" href="https://github.com/TheMaster3558/Master-Selector" aria-label="GitHub">
+              <i class="i-icon github"></i>
+            </a>
         </div>
       </div>
     </div>
@@ -66,9 +75,15 @@
   <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
     <div class="sy-lside-inner md:sticky">
       <div class="sy-scrollbar p-6">
-        <div class="globaltoc" data-expand-depth="0"><ul class="current">
+        <div class="globaltoc" data-expand-depth="0"><p class="caption" role="heading"><span class="caption-text">Guides</span></p>
+<ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1 - Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="usage.html">2 - Using Master-Selector</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Development</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development/api.html">API Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development/changelog.html">Changelog</a></li>
 </ul>
 
         </div>
@@ -130,7 +145,7 @@
         <article class="yue" role="main">
           <section id="getting-started">
 <h1>1 - Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h1>
-<p>This tutorial will teach you how to install <em>Master-Selector</em> and start using it!</p>
+<p>This tutorial will teach you how to install Master-Selector and start using it!</p>
 <section id="development-environment">
 <h2>Development Environment<a class="headerlink" href="#development-environment" title="Link to this heading">¶</a></h2>
 <p>Master-Selector is a template with <a class="reference external" href="https://pros.cs.purdue.edu">PROS</a>.
@@ -142,7 +157,7 @@ You can use PROS in any development environment but it is most commonly used wit
 <section id="master-selector-installation">
 <h2>Master-Selector Installation<a class="headerlink" href="#master-selector-installation" title="Link to this heading">¶</a></h2>
 <p>Visit our <a class="reference external" href="https://github.com/themaster3558/master-selector">GitHub</a> and navigate to the
-releases page. Then download the latest release, it should look like <cite>Master-Selector&#64;x.x.x.zip</cite>.
+releases page. Then download the latest release, it should look like <code class="docutils literal notranslate"><span class="pre">Master-Selector&#64;x.x.x.zip</span></code>.
 Once you have downloaded that, move it to your project folder.</p>
 <p>Next, open up your PROS terminal. You must run the following commands.</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span id="1-1">pros<span class="w"> </span>c<span class="w"> </span>fetch<span class="w"> </span>Master-Selector@x.x.x.zip
@@ -150,7 +165,7 @@ Once you have downloaded that, move it to your project folder.</p>
 </span></pre></div>
 </div>
 <p>Of course, replace the x’s with your installed Master-Selector version.</p>
-<p>Lastly, add this to your <cite>include/main.h</cite> file and you are ready to use Master-Selector!</p>
+<p>Lastly, add this to your <code class="docutils literal notranslate"><span class="pre">include/main.h</span></code> file and you are ready to use Master-Selector!</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span id="1-1"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;Master-Selector/api.hpp&quot;</span>
 </span></pre></div>
 </div>
@@ -202,6 +217,7 @@ Once you have downloaded that, move it to your project folder.</p>
         </p>
       </div>
       <div class="sy-foot-socials">
+          <a href="https://github.com/TheMaster3558/Master-Selector" aria-label="GitHub"><i class="i-icon github"></i></a>
       </div>
     </div>
   </div>

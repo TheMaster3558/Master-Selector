@@ -13,15 +13,18 @@ Features
 - Interactive GUI on brain
 
 
-Guides
-------
-.. toctree:: 
-    :maxdepth: 2
+Table of Contents
+-----------------
+
+.. toctree::
+    :caption: Guides
 
     guides/installation.rst
     guides/usage.rst
 
 
-API Reference
--------------
-View detailed documentation of all classes and functions :ref:`here<Master-Selector API Reference>`
+.. toctree::
+    :caption: Development
+
+    development/api.rst
+    development/changelog.rst
