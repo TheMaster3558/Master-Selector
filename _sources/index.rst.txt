@@ -28,3 +28,4 @@ Table of Contents
 
     development/api.rst
     development/changelog.rst
+    development/brain.rst
