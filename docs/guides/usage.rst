@@ -67,10 +67,10 @@ Remember that all classes and functions of Master-Selector are held within the `
         ms::initialize(); // Initialize the screen
     }
 
-Next add `call_selected_auton()` to your `autonomous()` function.
+Next add ``call_selected_auton()`` to your ``autonomous()`` function.
 
 .. code:: cpp
-
+z
     void autonomous() {
         ms::call_selected_auton();
     }
