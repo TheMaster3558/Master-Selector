@@ -28,21 +28,10 @@ jobs:
           pip install -r ./docs/requirements.txt
           python -m sphinx ./docs ./docs/_build
 
-      - name: Checkout gh-pages
-        uses: actions/checkout@v4
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          fetch-depth: 5
-          ref: gh-pages
-          path: docs/gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: docs/_build/
 
-      - name: Sync docs
-        run: |
-          rsync -a docs/_build/ docs/gh-pages/current/
 
-      - name: Commit and push docs
-        uses: magicstack/gha-commit-and-push@master
-        with:
-          target_branch: gh-pages
-          workdir: docs/gh-pages
-          commit_message: Automatic documentation update
-          github_token: ${{ secrets.RELEASE_BOT_GITHUB_TOKEN }}
