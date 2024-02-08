@@ -15,7 +15,7 @@ the auton is selected.
 
 Category
 ~~~~~~~~
-A category is a group of `Auton`'s. Each category has a name and contains different autons.
+A category is a group of ``Auton``'s. Each category has a name and contains different autons.
 We use categories to group autons together, for example, grouping all near side autons together.
 
 
@@ -43,12 +43,12 @@ it all depends on the other libraries that you use (We recommend `LemLib <https:
     }
 
 
-Once you have defined that, we'll navigate to the `initialize()` function in `src/main.cpp`.
-We'll define two categories: *Near Side* and *Skills*. We will add `near_side_awp` and `near_side_elims`
-to *Near-Side* and `skills` to *Skills*.
+Once you have defined that, we'll navigate to the ``initialize()`` function in ``src/main.cpp``.
+We'll define two categories: *Near Side* and *Skills*. We will add ``near_side_awp`` and ``near_side_elims``
+to *Near-Side* and ``skills`` to *Skills*.
 
-We will use the `set_autons` function with `Category` and `Auton` classes to do this.
-Remember that all classes and functions of Master-Selector are held within the `ms` namespace!
+We will use the ``set_autons`` function with ``Category`` and ``Auton`` classes to do this.
+Remember that all classes and functions of Master-Selector are held within the ``ms`` namespace!
 
 .. code:: cpp
 
