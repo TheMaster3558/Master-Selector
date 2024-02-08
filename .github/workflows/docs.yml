@@ -40,6 +40,9 @@ jobs:
           rsync -a docs/_build/ docs/gh-pages/current/
 
       - name: Commit and push docs
+        run: |
+          cd do
+
         uses: magicstack/gha-commit-and-push@master
         with:
           target_branch: gh-pages

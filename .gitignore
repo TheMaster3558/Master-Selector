@@ -24,7 +24,7 @@ temp.errors
 venv/
 
 # Docs
-docs/build
+docs/_build
 docs/_doxygen
 
 # Doxygen
