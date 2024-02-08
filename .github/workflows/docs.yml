@@ -37,7 +37,7 @@ jobs:
 
       - name: Sync docs
         run: |
-          rsync -a docs/_build/html/ docs/gh-pages/current/
+          rsync -a docs/_build/ docs/gh-pages/current/
 
       - name: Commit and push docs
         uses: magicstack/gha-commit-and-push@master

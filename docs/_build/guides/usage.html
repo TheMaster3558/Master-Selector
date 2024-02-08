@@ -1,0 +1,253 @@
+
+  <!DOCTYPE html>
+<html lang="en" data-accent-color="violet" data-content_root="../">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>2 - Using Master-Selector - Master-Selector documentation</title>
+    <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="prev" title="1 - Getting Started" href="installation.html" />
+
+  <script>
+    function setColorMode(t){let e=document.documentElement;e.setAttribute("data-color-mode",t);let a=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches,s=t;"auto"===t&&(s=a?"dark":"light"),"light"===s?(e.classList.remove("dark"),e.classList.add("light")):(e.classList.remove("light"),e.classList.add("dark"))}
+    setColorMode(sessionStorage._theme||"auto");
+  </script><link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=aecf457f" />
+    <link rel="stylesheet" type="text/css" href="../_static/shibuya.css?v=db2d6636" />
+    <link media="print" rel="stylesheet" type="text/css" href="../_static/print.css?v=20ff2c19" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sy-f-text: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+  --sy-f-heading: "Inter", var(--sy-f-sys), var(--sy-f-cjk), sans-serif;
+}
+</style>
+    <meta property="og:type" content="website"/><meta property="og:title" content="2 - Using Master-Selector"/>
+<meta name="twitter:card" content="summary"/></head>
+<body><div class="document"><div class="sy-head">
+  <div class="sy-head-blur"></div>
+  <div class="sy-head-inner sy-container mx-auto">
+    <a class="sy-head-brand mr-4" href="../index.html">
+      
+      
+      <strong>Master-Selector</strong>
+    </a>
+    <div class="sy-head-links" id="NavLinks">
+      <nav class="sy-head-nav"></nav>
+      <div class="sy-head-extra flex items-center print:hidden">
+<form class="searchbox flex items-center" action="../search.html" method="get">
+  <input type="text" name="q" placeholder="Search" />
+  <kbd>/</kbd>
+</form>
+        
+        
+        <div class="sy-head-social flex items-center">
+        </div>
+      </div>
+    </div>
+    <div class="sy-head-actions flex items-center shrink-0 print:hidden">
+      <button class="js-theme theme-switch flex items-center"
+        data-aria-auto="Switch to light color mode"
+        data-aria-light="Switch to dark color mode"
+        data-aria-dark="Switch to auto color mode">
+        <i class="i-icon theme-icon"></i>
+      </button>
+      <button class="md:hidden flex items-center js-menu" aria-label="Menu" type="button" aria-controls="NavLinks" aria-expanded="false">
+        <div class="hamburger">
+          <span class="hamburger_1"></span>
+          <span class="hamburger_2 -translate-x-2"></span>
+          <span class="hamburger_3 -translate-x-1"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+<div class="sy-page sy-container flex mx-auto">
+  <aside id="lside" class="sy-lside md:w-72 md:shrink-0 print:hidden">
+    <div class="sy-lside-inner md:sticky">
+      <div class="sy-scrollbar p-6">
+        <div class="globaltoc" data-expand-depth="0"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">1 - Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2 - Using Master-Selector</a></li>
+</ul>
+
+        </div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="lside-overlay js-menu" role="button" aria-label="Close left sidebar" aria-controls="lside" aria-expanded="false"></div>
+  <aside id="rside" class="sy-rside pb-3 w-64 shrink-0 order-last">
+    <button class="rside-close js-menu xl:hidden" aria-label="Close Table of Contents" type="button" aria-controls="rside" aria-expanded="false">
+      <i class="i-icon close"></i>
+    </button>
+    <div class="sy-scrollbar sy-rside-inner px-6 xl:top-16 xl:sticky xl:pl-0 pt-6 pb-4">
+  <div class="localtoc">
+    <h3>On this page</h3>
+    <ul>
+<li><a class="reference internal" href="#our-classes">Our Classes</a><ul>
+<li><a class="reference internal" href="#auton">Auton</a></li>
+<li><a class="reference internal" href="#category">Category</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-the-classes">Using The Classes</a></li>
+</ul>
+
+  </div><div id="ethical-ad-placement" data-ea-publisher="readthedocs"></div>
+    </div>
+  </aside>
+  <div class="rside-overlay js-menu" role="button" aria-label="Close Table of Contents" aria-controls="rside" aria-expanded="false"></div>
+  <main class="sy-main w-full max-sm:max-w-full print:pt-6">
+    <div class="sy-breadcrumbs" role="navigation">
+  <div class="sy-breadcrumbs-inner flex items-center">
+    <div class="md:hidden mr-3">
+      <button class="js-menu" aria-label="Menu" type="button" aria-controls="lside" aria-expanded="false">
+        <i class="i-icon menu"></i>
+      </button>
+    </div>
+    <ol class="flex-1" itemscope itemtype="https://schema.org/BreadcrumbList">
+      
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="../index.html"><span itemprop="name">Master-Selector</span></a>
+        <span>/</span>
+        <meta itemprop="position" content="1" />
+      </li>
+      
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <strong itemprop="name">2 - Using Master-Selector</strong>
+        <meta itemprop="position" content="2" />
+      </li>
+      
+      
+    </ol>
+    <div class="xl:hidden ml-1">
+      <button class="js-menu" aria-label="Show table of contents" type="button" aria-controls="rside"
+        aria-expanded="false">
+        <i class="i-icon outdent"></i>
+      </button>
+    </div>
+  </div>
+</div>
+    <div class="flex flex-col break-words justify-between">
+      <div class="min-w-0 max-w-6xl px-6 pb-6 pt-8 xl:px-12">
+        <article class="yue" role="main">
+          <section id="using-master-selector">
+<h1>2 - Using Master-Selector<a class="headerlink" href="#using-master-selector" title="Link to this heading">¶</a></h1>
+<p>Now that you’ve installed Master-Selector, you need to learn how to use it.
+Luckily, it’s pretty simple!</p>
+<section id="our-classes">
+<h2>Our Classes<a class="headerlink" href="#our-classes" title="Link to this heading">¶</a></h2>
+<p>These classes define how Master-Selector works, if you understand these, development will be easy.</p>
+<section id="auton">
+<h3>Auton<a class="headerlink" href="#auton" title="Link to this heading">¶</a></h3>
+<p>An auton has a name and a callback. The callback is the function that will be called when
+the auton is selected.</p>
+</section>
+<section id="category">
+<h3>Category<a class="headerlink" href="#category" title="Link to this heading">¶</a></h3>
+<p>A category is a group of <cite>Auton</cite>’s. Each category has a name and contains different autons.
+We use categories to group autons together, for example, grouping all near side autons together.</p>
+</section>
+</section>
+<section id="using-the-classes">
+<h2>Using The Classes<a class="headerlink" href="#using-the-classes" title="Link to this heading">¶</a></h2>
+<p>It’s pretty simple. You first need to define a few autons somewhere in my code. We’ll use
+these as an example. Remember that your autons may look very different than someone else’s,
+it all depends on the other libraries that you use (We recommend <a class="reference external" href="https://lemlib.github.io/LemLib/index.html">LemLib</a>).</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span id="1-1"><span class="c1">// Near side and gets the auton win point</span>
+</span><span id="1-2"><span class="kt">void</span><span class="w"> </span><span class="nf">near_side_awp</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="1-3"><span class="w">    </span><span class="c1">// ...</span>
+</span><span id="1-4"><span class="p">}</span>
+</span><span id="1-5">
+</span><span id="1-6"><span class="c1">// Near side for elimination rounds</span>
+</span><span id="1-7"><span class="kt">void</span><span class="w"> </span><span class="nf">near_side_elims</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="1-8"><span class="w">    </span><span class="c1">// ...</span>
+</span><span id="1-9"><span class="p">}</span>
+</span><span id="1-10">
+</span><span id="1-11"><span class="c1">// Skills</span>
+</span><span id="1-12"><span class="kt">void</span><span class="w"> </span><span class="nf">skills</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="1-13"><span class="w">    </span><span class="c1">// ...</span>
+</span><span id="1-14"><span class="p">}</span>
+</span></pre></div>
+</div>
+<p>Once you have defined that, we’ll navigate to the <cite>initialize()</cite> function in <cite>src/main.cpp</cite>.
+We’ll define two categories: <em>Near Side</em> and <em>Skills</em>. We will add <cite>near_side_awp</cite> and <cite>near_side_elims</cite>
+to <em>Near-Side</em> and <cite>skills</cite> to <em>Skills</em>.</p>
+<p>We will use the <cite>set_autons</cite> function with <cite>Category</cite> and <cite>Auton</cite> classes to do this.
+Remember that all classes and functions of Master-Selector are held within the <cite>ms</cite> namespace!</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span id="1-1"><span class="kt">void</span><span class="w"> </span><span class="nf">initialize</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="1-2"><span class="w">    </span><span class="c1">// Do extra initializing here</span>
+</span><span id="1-3">
+</span><span id="1-4"><span class="w">    </span><span class="n">ms</span><span class="o">::</span><span class="n">set_autons</span><span class="p">({</span><span class="w">  </span><span class="c1">// Vector of categories</span>
+</span><span id="1-5"><span class="w">        </span><span class="n">ms</span><span class="o">::</span><span class="n">Category</span><span class="p">(</span><span class="s">&quot;Near-Side&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="1-6"><span class="w">            </span><span class="n">ms</span><span class="o">::</span><span class="n">Auton</span><span class="p">(</span><span class="s">&quot;Auton Win Point&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">near_side_awp</span><span class="p">),</span>
+</span><span id="1-7"><span class="w">            </span><span class="n">ms</span><span class="o">::</span><span class="n">Auton</span><span class="p">(</span><span class="s">&quot;Eliminations&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">near_side_elims</span><span class="p">)</span>
+</span><span id="1-8"><span class="w">        </span><span class="p">}),</span>
+</span><span id="1-9"><span class="w">        </span><span class="n">ms</span><span class="o">::</span><span class="n">Category</span><span class="p">(</span><span class="s">&quot;Skills&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+</span><span id="1-10"><span class="w">            </span><span class="n">ms</span><span class="o">::</span><span class="n">Auton</span><span class="p">(</span><span class="s">&quot;Skills&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">skills</span><span class="p">)</span>
+</span><span id="1-11"><span class="w">        </span><span class="p">})</span>
+</span><span id="1-12"><span class="w">    </span><span class="p">});</span>
+</span><span id="1-13"><span class="w">    </span><span class="n">ms</span><span class="o">::</span><span class="n">initialize</span><span class="p">();</span><span class="w"> </span><span class="c1">// Initialize the screen</span>
+</span><span id="1-14"><span class="p">}</span>
+</span></pre></div>
+</div>
+<p>Next add <cite>call_selected_auton()</cite> to your <cite>autonomous()</cite> function.</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span id="1-1"><span class="kt">void</span><span class="w"> </span><span class="nf">autonomous</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="1-2"><span class="w">    </span><span class="n">ms</span><span class="o">::</span><span class="n">call_selected_auton</span><span class="p">();</span>
+</span><span id="1-3"><span class="p">}</span>
+</span></pre></div>
+</div>
+<p>From here, you’re all good to go! If you want to view more detail about the classes
+and functions, visit <a class="reference internal" href="../api.html#master-selector-api-reference"><span class="std std-ref">this</span></a> section of our documentation.</p>
+<p>Good luck coding!</p>
+</section>
+</section>
+
+        </article>
+        
+        <div class="navigation flex print:hidden">
+  <div class="navigation-prev">
+    <a href="installation.html">
+      <i class="i-icon chevron"></i>
+      <div class="page-info">
+        <span>Previous</span>
+        
+        <div class="title">1 - Getting Started</div>
+        
+      </div>
+    </a>
+  </div>
+  
+</div>
+        
+      </div>
+    </div>
+  </main>
+</div>
+<footer class="sy-foot">
+  <div class="sy-foot-inner sy-container mx-auto">
+    
+    <div class="sy-foot-reserved md:flex justify-between items-center">
+      <div class="sy-foot-copyright"><p>2024, The Master</p>
+        
+        <p>
+          Made with
+          
+          <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+          
+          <a href="https://shibuya.lepture.com">Shibuya theme</a>.
+        </p>
+      </div>
+      <div class="sy-foot-socials">
+      </div>
+    </div>
+  </div>
+</footer></div>
+      <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+      <script src="../_static/doctools.js?v=888ff710"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/shibuya.js?v=ccb09f80"></script>
+    
+</body>
+</html>
