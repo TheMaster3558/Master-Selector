@@ -1,9 +1,12 @@
 # Master-Selector
-Welcome to Master-Selector !
+Welcome to Master-Selector!
 Master-Selector is a simple yet capable PROS template that handles your autonomous routine selector
 
 The creation of this library was inspired by this [autonomous selector](https://github.com/kunwarsahni01/Vex-Autonomous-Selector).
 This library aims to be an up-to-date and more flexible version of our inspiration.
+
+## Documentation
+Check out our documentation [here](https://themaster3558.github.io/Master-Selector).
 
 ## License
 MIT, see the LICENSE file for more
