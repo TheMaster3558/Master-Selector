@@ -45,3 +45,4 @@ jobs:
           target_branch: gh-pages
           workdir: docs/gh-pages
           commit_message: Automatic documentation update
+          github_token: ${{ secrets.RELEASE_BOT_GITHUB_TOKEN }}
