@@ -40,15 +40,8 @@ jobs:
           rsync -a docs/_build/ docs/gh-pages/current/
 
       - name: Commit and push docs
-        run: |
-          cd do
-
         uses: magicstack/gha-commit-and-push@master
         with:
           target_branch: gh-pages
           workdir: docs/gh-pages
           commit_message: Automatic documentation update
-          github_token: ${{ secrets.RELEASE_BOT_GITHUB_TOKEN }}
-          ssh_key: ${{ secrets.RELEASE_BOT_SSH_KEY }}
-          gpg_key: ${{ secrets.RELEASE_BOT_GPG_KEY }}
-          gpg_key_id: "5C468778062D87BF!"
