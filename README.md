@@ -6,7 +6,7 @@ The creation of this library was inspired by this [autonomous selector](https://
 This library aims to be an up-to-date and more flexible version of our inspiration.
 
 ## Documentation
-Check out our documentation [here](https://themaster3558.github.io/Master-Selector).
+Check out our documentation [here](https://themaster3558.github.io/Master-Selector)
 
 ## License
 MIT, see the LICENSE file for more
