@@ -21,6 +21,7 @@ Table of Contents
 
     guides/installation.rst
     guides/usage.rst
+    guides/brain.rst
 
 
 .. toctree::
@@ -28,4 +29,3 @@ Table of Contents
 
     development/api.rst
     development/changelog.rst
-    development/brain.rst
