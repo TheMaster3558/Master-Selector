@@ -6,4 +6,4 @@ TODO
 ----
 
 
-**Back to Home:** :doc:`index`
+**Back to Home:** :ref:`Welcome to Master-Selector's documentation!`
