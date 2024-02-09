@@ -70,14 +70,14 @@ Remember that all classes and functions of Master-Selector are held within the `
 Next add ``call_selected_auton()`` to your ``autonomous()`` function.
 
 .. code:: cpp
-z
+
     void autonomous() {
         ms::call_selected_auton();
     }
 
 
 From here, you're all good to go on the coding part! If you want to view more detail about the classes
-and functions, visit :ref:`this<Master-Selector API Reference>` section of our documentation.
+and functions, visit :ref:`this <API Reference>` section of our documentation.
 
 
-:ref:`Next Guide<3 - Interacting with the Brain>`
+**Next Guide:** :doc:`brain`
