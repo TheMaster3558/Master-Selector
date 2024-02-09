@@ -36,4 +36,4 @@ Lastly, add this to your ``include/main.h`` file and you are ready to use Master
     #include "Master-Selector/api.hpp"
 
 
-:ref:`Next Guide<2 - Using Master-Selector>`
+**Next Guide:** :doc:`usage`
