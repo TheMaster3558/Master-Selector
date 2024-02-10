@@ -38,7 +38,7 @@ html_static_path = ['_static']
 
 html_theme_options = {
     'github_url': 'https://github.com/TheMaster3558/Master-Selector',
-    'accent_color': 'sky',
+    'accent_color': 'violet',
     'nav_links': [
         {
             'title': 'GitHub',
