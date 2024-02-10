@@ -35,7 +35,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'shibuya'
 html_static_path = ['_static']
 
-html_logo = '_static/logo.png'
 
 html_theme_options = {
     'github_url': 'https://github.com/TheMaster3558/Master-Selector',
