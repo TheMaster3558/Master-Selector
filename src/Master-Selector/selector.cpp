@@ -2,11 +2,11 @@
 
 
 std::vector<ms::Category> auton_categories = {};
-ms::Auton* selected_auton = nullptr;
+std::shared_ptr<ms::Auton> selected_auton(nullptr);
 
 void ms::set_autons(const std::vector<ms::Category> &categories) {
     auton_categories = categories;
-    selected_auton = &auton_categories[0].autons[0];
+    selected_auton = std::make_shared<ms::Auton>(auton_categories[0].autons[0]);
 }
 
 
@@ -25,7 +25,7 @@ std::map<lv_obj_t*, ms::Category*> btnm_to_category;
 lv_res_t button_action(lv_obj_t *btnm, const char *txt) {
     for (ms::Auton& auton : btnm_to_category[btnm]->autons) {
         if (strcmp(auton.name.c_str(), txt) == 0) {
-            selected_auton = &auton;
+            selected_auton = std::make_shared<ms::Auton>(auton);
             break;
         }
     }
@@ -41,7 +41,7 @@ void handle_tab_change() {
         int current_tab = lv_tabview_get_tab_act(tabview);
 
         if (current_tab != previous_tab) {
-            selected_auton = &auton_categories[current_tab].autons[0];
+            selected_auton = std::make_shared<ms::Auton>(auton_categories[current_tab].autons[0]);
 
             lv_obj_t* btnm = btnms[previous_tab];
             lv_btnm_set_toggle(btnm, true, 0);
