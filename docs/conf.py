@@ -35,10 +35,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'shibuya'
 html_static_path = ['_static']
 
-
 html_theme_options = {
     'github_url': 'https://github.com/TheMaster3558/Master-Selector',
-    'accent_color': 'violet',
+    'accent_color': 'gold',
     'nav_links': [
         {
             'title': 'GitHub',
@@ -48,5 +47,7 @@ html_theme_options = {
             'title': 'Releases',
             'url': 'https://github.com/TheMaster3558/Master-Selector/releases'
         }
-    ]
+    ],
+    'light_logo': '_static/branding/Master-Selector-light.svg',
+    'dark_logo': '_static/branding/Master-Selector-dark.svg'
 }
