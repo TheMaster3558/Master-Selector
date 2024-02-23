@@ -1,4 +1,7 @@
 # Master-Selector
+
+![Master-Selector](docs/_static/branding/MasterSelector%20(640%20x%20320%20px).png)
+
 Welcome to Master-Selector!
 Master-Selector is a simple yet capable PROS template that handles your autonomous routine selector
 
