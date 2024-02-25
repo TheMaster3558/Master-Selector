@@ -35,15 +35,12 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'shibuya'
 html_static_path = ['_static']
 
+html_favicon = '_static/branding/nobg_centerfill.png'
+
 html_theme_options = {
+    'accent_color': 'gold',
     'light_logo': '_static/branding/Master-Selector-light.svg',
     'dark_logo': '_static/branding/Master-Selector-dark.svg',
-    'light_css_variables': {
-        '--sy-rc-theme': '239,194,150',
-    },
-    'dark_css_variables': {
-        '--sy-rc-theme': '239,194,150',
-    },
     'github_url': 'https://github.com/TheMaster3558/Master-Selector',
     'nav_links': [
         {
