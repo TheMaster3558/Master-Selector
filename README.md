@@ -1,6 +1,8 @@
 # Master-Selector
 
-![Master-Selector](docs/_static/branding/MasterSelector%20(640%20x%20320%20px).png)
+| ![Master-Selector](docs/_static/branding/MasterSelector%20(640%20x%20320%20px).png) |
+|:--:|
+| *Logo created by [@LyubomirT](https://github.com/LyubomirT)* |
 
 Welcome to Master-Selector!
 Master-Selector is a simple yet capable PROS template that handles your autonomous routine selector
